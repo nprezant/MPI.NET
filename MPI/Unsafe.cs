@@ -92,13 +92,15 @@ namespace MPI
         public const int OPAL_MAX_PROCESSOR_NAME = 256;
         public const int OPAL_MAX_ERROR_STRING = 256;
 
-//#if MPICH2
-//        private const string MPI_DLL = "mpich2.dll";
-//#else
-//        private const string MPI_DLL = "msmpi.dll";
-//#endif
-//        private const string MPI_DLL = "libmpi.so";
+#if WINDOWS
+#if MPICH2
+        private const string MPI_DLL = "mpich2.dll";
+#else
+        private const string MPI_DLL = "msmpi.dll";
+#endif
+#elif LINUX
         private const string MPI_DLL = "libmpi";
+#endif
 
         /// <summary>
         /// Low-level representation of the status of an MPI communication operation.

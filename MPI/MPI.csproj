@@ -3,7 +3,7 @@
     <ProjectGuid>{3CB12C2E-85FE-44B6-8183-5790AF3A3515}</ProjectGuid>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>MPI.snk</AssemblyOriginatorKeyFile>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>

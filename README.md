@@ -6,6 +6,16 @@ MPI.NET is a high-performance, easy-to-use implementation of the Message Passing
 
 Use, modification and distribution is subject to the Boost Software License, Version 1.0. (See accompanying file [LICENSE_1_0.txt](./LICENSE_1_0.txt) or copy at http://www.boost.org/LICENSE_1_0.txt)
 
+## Fork Notes
+
+Forked to update to dotnet6 and to work on linux (specifically, ubuntu 22.04 on AWS parallel cluster).
+
+* Update to dotnet6.0
+* `sudo apt install dotnet`
+* dotnet build
+* Make ctags with `ctags -R` in the MPI folder
+* How to run tests now?
+
 ## Getting started
 
 You can use this library in your project(s) [as a NuGet package](https://www.nuget.org/packages/MPI.NET)

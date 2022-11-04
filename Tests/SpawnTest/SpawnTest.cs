@@ -10,6 +10,7 @@ namespace SpawnTest
     {
         static void Main(string[] args)
         {
+#if PROCESS_CREATION_PRESENT
             using (new MPI.Environment(ref args))
             {
                 string path;
@@ -40,6 +41,7 @@ namespace SpawnTest
                 inter_comm.Dispose();
 
             }
+#endif
         }
     }
 }

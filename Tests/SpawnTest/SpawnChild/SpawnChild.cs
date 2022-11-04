@@ -8,8 +8,9 @@ namespace SpawnChild
     {
         static void Main(string[] args)
         {
+#if PROCESS_CREATION_PRESENT
             using (new MPI.Environment(ref args))
-            {          
+            {
                 Intercommunicator parent;
                 parent = MPI.Communicator.world.Parent;
                 //if (parent == null) 
@@ -24,6 +25,7 @@ namespace SpawnChild
 
                 parent.Barrier();
             }
+#endif
         }
     }
 }

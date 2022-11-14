@@ -26,6 +26,7 @@ TestResults
 *.user
 *.sln.docstates
 .vs/
+.vscode/
 
 # Build results
 [Dd]ebug/

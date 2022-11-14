@@ -1,3 +1,4 @@
+#!/bin/env bash
 # Copyright (C) 2017  CSIRO
 #
 # Use, modification and distribution is subject to the Boost Software
@@ -16,7 +17,6 @@
 # set FAILURES=
 # echo exename=$0
 tests_folder=`dirname $0`
-mpidotnet_folder=$tests_folder/..
 
 OLDDIR=`pwd`
 
@@ -25,8 +25,8 @@ test_names=`ls -d *Test`
 cd $OLDDIR
 
 for test_name in $test_names ; do 
-  echo $tests_folder/runtest.sh $mpidotnet_folder ${tests_folder}/${test_name}/${test_name}.exe  
-  $tests_folder/runtest.sh $mpidotnet_folder ${tests_folder}/${test_name}/${test_name}.exe  
+  echo $tests_folder/runtest.sh ${tests_folder}/${test_name}
+  $tests_folder/runtest.sh ${tests_folder}/${test_name}
   if test $? == 0 ; then
     echo "PASS $test_name (with $procs processes)"
   else
